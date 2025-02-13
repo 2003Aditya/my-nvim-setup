@@ -42,13 +42,17 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set(
-    "n",
-    "<leader>ee",
-    "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
+"n",
+"<leader>ee",
+"oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
 )
 
 
+-- Paste from system clipboard
+vim.keymap.set("n", "<leader>P", '"+P') -- Paste before cursor
+vim.keymap.set("n", "<leader>p", '"+p') -- Paste after cursor
+
 -- vim.keymap.set("n", "<C-CR>", function()
---     vim.cmd("so")
--- end)
---
+    --     vim.cmd("so")
+    -- end)
+    --
